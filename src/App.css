@@ -1,0 +1,554 @@
+/* styles.css */
+/* تحسين شكل الصورة */
+.hero-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .btn-orange {
+    color: white;
+    background-color: #FA7436;
+  }
+  
+  .hero-text {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  
+  
+  
+
+/* زر التشغيل مع تأثير النبض */
+.pulsating-play-btn {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 69, 0, 0.9);
+    border-radius: 50%;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* تأثير النبض */
+.pulsating-play-btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 69, 0, 0.5);
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* تحسين على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .pulsating-play-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .pulsating-play-btn::before {
+        font-size: 25px;
+    }
+    .play-icon{
+        margin-top: 10px !important;
+    }
+}
+/* Navbar.css */
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .text-orange {
+    color: #FA7436 !important;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff6600;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ff6600 !important;
+  }
+  
+  .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .phone-section {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ff6600;
+  }
+  
+  .phone-icon {
+    font-size: 1.2rem;
+    color: #ff6600;
+  }
+  
+  .logo-image {
+    height: 40px;
+  }
+  .about-section {
+    padding: 50px 0;
+  }
+  
+  .about-heading {
+    color: #ff6600;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #FA7436;
+  }
+  
+  .about-text {
+    color: #555;
+    font-size: 1.1rem;
+  }
+  
+  .btn-orange {
+    background-color: #FA7436;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-orange:hover {
+    background-color: #ffffff;
+    color: black;
+    border: 3px bold #ff6600 ;
+ 
+  }
+  
+  .counters {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .counter-box {
+    text-align: center;
+  }
+  
+  .counter-number {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .orange {
+    color: #ff6600;
+  }
+  
+  .blue {
+    color: #007bff;
+  }
+  
+  .green {
+    color: #28a745;
+  }
+  
+/* صندوق البحث */
+.search-box-container {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 8px;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.search-icon {
+    color: #ff4500;
+    font-size: 18px;
+}
+
+.search-btn {
+    background: #ff4500;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #e03e00;
+}
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .search-box-container {
+        position: relative !important;
+        top: 100px !important;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .play-btn-container {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-btn {
+        font-size: 25px;
+    }
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.text-orange {
+    color: orange;
+}
+
+.section-subtitle {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.testimonial-card {
+    background: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid orange;
+}
+
+.testimonial-name {
+    font-weight: bold;
+}
+
+.testimonial-rating {
+    color: orange;
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-date {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    color: white;
+    border-radius: 5px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.bg-blue {
+    background-color: #007bff;
+}
+
+.bg-orange {
+    background-color: #fd7e14;
+}
+
+.bg-red {
+    background-color: #dc3545;
+}
+
+.footer {
+    background: #f8f9fa;
+}
+
+.btn-orange {
+    background-color: #fd7e14;
+    color: white;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: #e65c00;
+}
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 69, 0, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+.play-icon {
+    color: white;
+    font-size: 40px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* استجابة الجوال */
+@media (max-width: 768px) {
+    .carousel .carousel-item {
+        text-align: center;
+    }
+
+    .carousel-item .col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* تبويبات متجاوبة */
+.tab-container {
+    white-space: nowrap;
+    overflow-x: auto;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+/* تحسين شكل الأزرار */
+.tab-btn {
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-orange {
+    background-color: #fa7436;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn-orange:hover,
+.active-tab {
+    background-color: #d85c2a !important;
+    color: white !important;
+}
+
+.btn-outline {
+    border: 2px solid #fa7436;
+    color: #fa7436;
+    border-radius: 20px;
+}
+
+.btn-outline:hover {
+    background-color: #fa7436;
+    color: white;
+}
+
+/* جعل التبويبات قابلة للتمرير على الجوال */
+@media (max-width: 768px) {
+    .tab-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        /* إخفاء شريط التمرير */
+    }
+
+    .tab-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* جعل الكروت تأخذ عرض الشاشة بالكامل على الجوال */
+@media (max-width: 576px) {
+    .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+.footer-custom {
+    background-color: #fef7f1;
+    padding: 50px 0;
+    color: #333;
+  }
+  
+  .footer-logo {
+    width: 120px;
+  }
+  
+  .footer-text {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .footer-heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .list-unstyled li a {
+    text-decoration: none !important;
+    color: #666 !important;
+  }
+  
+  .footer-links a:hover {
+    color: #ff6600;
+  }
+  
+  .footer-social {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    margin-right: 10px;
+    color: #ff6600;
+    cursor: pointer;
+  }
+  
+  .footer-button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .list-unstyled a:hover {
+    color: #e65c00;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+    font-size: 13px;
+  }
+  
+  .footer-bottom a {
+    text-decoration: none;
+    color: #ff6600;
+  }
+  
