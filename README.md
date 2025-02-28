@@ -17,6 +17,6 @@ This project provides a seamless user experience for browsing travel destination
 - **React Router (if applicable)** - Page navigation  
 
 ## 🌐 GitHub Pages Deployment
-🔗 [View Project on GitHub Pages]((https://salmasnawi.github.io/travel/))  
+🔗 [View Project on GitHub Pages](https://salmasnawi.github.io/travel/)  
 
 
